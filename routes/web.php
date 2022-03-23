@@ -1,6 +1,9 @@
 <?php
 
+namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'welcome']);
+
+Route::get('login', [HomeController::class, 'login']);
+
+Route::get('calculator', [HomeController::class, 'calculator']);
+
+Route::get('policy', [HomeController::class, 'policy']);
+
+Route::get('security', [HomeController::class, 'security']);
+
+Route::get('terms', [HomeController::class, 'terms']);
+
+Route::get('confirm', [HomeController::class, 'confirm']);
+
